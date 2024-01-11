@@ -1,0 +1,156 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ......................... 12
+2. Variables ...................... 16
+3. Estilos generales .............. 27
+4. Estilos container .............. 48
+5. Estilos card ................... 57
+6. Estilos header ................. 68
+7. Estilos body ................... 78
+8. Estilos boton primario ......... 103
+9. Estilos footer ................. 133
+10. Media queries ................. 150
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- Variables ----- */
+* {
+	--primary-font-family: 'Poppins', sans-serif;
+	--body-bg-color: #EEF2F9;
+	--btn-bg-color: #4788E9;
+	--text-color: #191847;
+	--white-color: #FFFFFF;
+	--black-color: #000000;
+	--bullet-color: #00D98B;
+	--font-size: 1rem;
+	--lh-text: 22px;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--primary-font-family);
+	color: var(--text-color);
+	font-size: var(--font-size);
+	line-height: var(--lh-text);
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ----- Estilos container ----- */
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	background-color: var(--body-bg-color);
+}
+
+/* ----- Estilos card ----- */
+.card {
+	width: 620px;
+	padding: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	box-shadow: 0 0 9px #ccc;
+	border-radius: 10px;
+	background-color: var(--white-color);
+}
+
+/* ----- Estilos header ----- */
+.card__header {
+	width: 250px;
+	text-align: right;
+}
+
+.card__image {
+	width: 100%;
+}
+
+/* ----- Estilos body ----- */
+.card__tag {
+	padding: 6px 12px;
+	border-radius: 18px;
+	font-size: 0.8rem;
+	color: var(--white-color);
+	background-color: var(--text-color);
+}
+
+.card__title {
+	font-size: 1.1rem;
+	line-height: 1.6rem;
+	padding: 10px 0;
+}
+
+.new--price {
+	margin: 15px 0;
+	font-size: 2rem;
+}
+
+.card__copy {
+	font-size: 0.7rem;
+	color: #555;
+}
+
+/* ----- Estilos boton primario ----- */
+.button--body{
+	display: block;
+	padding: 12px;
+	background-color: var(--btn-bg-color);
+	color: var(--white-color);
+	text-align: center;
+	font-size: 1.1rem;
+	border-radius: 8px;
+	box-shadow: 0 7px 0 #1C57EE;
+}
+
+.card__stock {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+}
+
+.bullet {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: var(--bullet-color);
+}
+
+.stock {
+	font-weight: bold;
+}
+
+/* ----- Estilos footer ----- */
+.card__footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.button {
+	display: inline-block;
+	padding:12px 17px;
+	border: 1px solid #C9C9DA;
+	border-radius: 8px;
+	color: var(--text-color);
+	font-size: 14px;
+}
+
+
+/* ----- Media queries ----- */
+@media screen and (max-width: 1080px) {
+	.card {
+		width: 90%;
+		grid-template-columns: 1fr;
+	}
+}
